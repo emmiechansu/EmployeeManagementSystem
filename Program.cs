@@ -7,8 +7,6 @@ namespace EmployeeManagementSystem
     {
         static string[] employeeNames = new string[3];
 
-        static string[] shiftStart = new string[3];
-
         static List<string> attendanceLogs = new List<string>();
         static void Main(string[] args)
         {
@@ -43,9 +41,6 @@ namespace EmployeeManagementSystem
             employeeNames[1] = "Maria Fabreag";
             employeeNames[2] = "Pedro Pascual";
 
-            shiftStart[0] = "8:00 AM";
-            shiftStart[1] = "9:00 AM";
-            shiftStart[2] = "10:00AM";
         }
 
         static void RecordTimeIn()
