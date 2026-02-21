@@ -5,7 +5,7 @@ namespace EmployeeManagementSystem
 {
     internal class Program
     {
-        static string[] employeeNames = new string[3];
+        static string[] employeeNames = new string[5];
 
         static List<string> attendanceLogs = new List<string>();
         static void Main(string[] args)
@@ -40,9 +40,9 @@ namespace EmployeeManagementSystem
             employeeNames[0] = "Juan Dela Cruz";
             employeeNames[1] = "Maria Fabreag";
             employeeNames[2] = "Pedro Pascual";
-
+            employeeNames[3] = "Glenn Cordial";
+            employeeNames[4] = "Mickey Abelidas";
         }
-
         static void RecordTimeIn()
         {
             Console.Write("Enter Employee Name: ");
@@ -60,7 +60,6 @@ namespace EmployeeManagementSystem
 
             Console.WriteLine("Time In Successfully Recorded.");
         }
-
         static int FindEmployee(string name)
         {
             for (int i = 0; i < employeeNames.Length; i++)
@@ -71,7 +70,6 @@ namespace EmployeeManagementSystem
 
             return -1;
         }
-
         static void DisplayLogs()
         {
             Console.WriteLine("\nWorking Logs:");
