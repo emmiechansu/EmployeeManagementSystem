@@ -5,60 +5,93 @@ namespace EmployeeManagementSystem
 {
     internal class Program
     {
+
         static string[] employeeNames = new string[5];
+        static int employeeCount = 3;
+
 
         static List<string> attendanceLogs = new List<string>();
+
         static void Main(string[] args)
         {
             Console.WriteLine("Employee Management System");
 
+
             PopulateData();
 
-            bool isRecord = RecordOption();
-
-            if (isRecord)
+            bool run = true;
+            while (run)
             {
-                RecordAttendance();
+                Console.WriteLine("\nSelect:");
+                Console.WriteLine("[1] Add Employee");
+                Console.WriteLine("[2] Time In/Time Out");
+                Console.WriteLine("[3] View Records (Includes: Late, Undertime)");
+                Console.WriteLine("[4] Shifting Schedule");
+                Console.WriteLine("[5] Exit");
+
+                Console.Write("Choose: ");
+                string choice = Console.ReadLine();
+
+                switch (choice)
+                {
+                    case "1":
+                        AddEmployee();
+                        break;
+                    case "2":
+                        RecordAttendance();
+                        break;
+                    case "3":
+                        DisplayLogs();
+                        break;
+                    case "4":
+                        ShowShifts();
+                        break;
+                    case "5":
+                        run = false;
+                        break;
+                    default:
+                        Console.WriteLine("Invalid choice.");
+                        break;
+                }
+            }
+        }
+        static void AddEmployee()
+        {
+            if (employeeCount >= employeeNames.Length)
+            {
+                Console.WriteLine("Employee list is full.");
+                return;
             }
 
-            DisplayLogs();
-        }
-
-        static bool RecordOption()
-        {
-            Console.Write("\nTime in? Yes or No: ");
-            string input = Console.ReadLine();
-
-            if (input.ToLower() == "yes")
-                return true;
-            else
-                return false;
-        }
-
-        static void PopulateData()
-        {
-            employeeNames[0] = "Juan Dela Cruz";
-            employeeNames[1] = "Maria Fabreag";
-            employeeNames[2] = "Pedro Pascual";
-            employeeNames[3] = "Glenn Cordial";
-            employeeNames[4] = "Mickey Abelidas";
-        }
-        static void RecordAttendance()
-        {
             Console.Write("Enter Employee Name: ");
             string name = Console.ReadLine();
 
-            int index = FindEmployee(name);
+            employeeNames[employeeCount] = name;
+            employeeCount++;
 
-            if (index == -1)
+            Console.WriteLine("Employee Added Successfully!");
+        }
+        static void RecordAttendance()
+        {
+            if (employeeCount == 0)
+            {
+                Console.WriteLine("No employees found.");
+                return;
+            }
+
+            Console.Write("Enter Employee Name: ");
+            string name = Console.ReadLine();
+
+            if (FindEmployee(name) == -1)
             {
                 Console.WriteLine("Employee not found.");
                 return;
             }
 
             Console.WriteLine("\nSelect Shift:");
-            Console.WriteLine("1 - Morning (8AM - 5PM)");
-            Console.WriteLine("2 - Afternoon (1PM - 10PM)");
+            Console.WriteLine("[1] Morning (8AM-5PM)");
+            Console.WriteLine("[2] Afternoon (1PM-10PM)");
+
             string shift = Console.ReadLine();
 
             Console.Write("Enter Time In: ");
@@ -75,7 +108,6 @@ namespace EmployeeManagementSystem
             {
                 if (timeIn != "8AM")
                     status = "Late";
-
 
                 if (timeOut == "6PM")
                     overtime = "Yes";
@@ -97,33 +129,51 @@ namespace EmployeeManagementSystem
             }
 
             attendanceLogs.Add(
-                            name +
-                            " | Shift: " + shift +
-                            " | Status: " + status +
-                            " | Overtime: " + overtime +
-                            " | Undertime: " + undertime
-                        );
+                name +
+                " | Shift: " + (shift == "1" ? "Morning" : "Afternoon") +
+                " | Status: " + status +
+                " | Overtime: " + overtime +
+                " | Undertime: " + undertime
+            );
 
-            Console.WriteLine("Time In Successfully Recorded.");
+            Console.WriteLine("Attendance Recorded Successfully.");
         }
         static int FindEmployee(string name)
         {
-            for (int i = 0; i < employeeNames.Length; i++)
+            for (int i = 0; i < employeeCount; i++)
             {
                 if (employeeNames[i].ToLower() == name.ToLower())
                     return i;
             }
-
             return -1;
         }
         static void DisplayLogs()
         {
-            Console.WriteLine("\nWorking Logs:");
+            if (attendanceLogs.Count == 0)
+            {
+                Console.WriteLine("No attendance records yet.");
+                return;
+            }
 
+            Console.WriteLine("\nAttendance Records:");
             foreach (var log in attendanceLogs)
             {
                 Console.WriteLine(log);
             }
+        }
+        static void ShowShifts()
+        {
+            Console.WriteLine("\nShift Schedule:");
+            Console.WriteLine("Morning: 8AM - 5PM");
+            Console.WriteLine("Afternoon: 1PM - 10PM");
+        }
+
+
+        static void PopulateData()
+        {
+            employeeNames[0] = "Juan Dela Cruz";
+            employeeNames[1] = "Maria Fabreag";
+            employeeNames[2] = "Pedro Pascual";
         }
     }
 }
