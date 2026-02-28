@@ -18,7 +18,7 @@ namespace EmployeeManagementSystem
 
             if (isRecord)
             {
-                RecordTimeIn();
+                RecordAttendance();
             }
 
             DisplayLogs();
@@ -43,7 +43,7 @@ namespace EmployeeManagementSystem
             employeeNames[3] = "Glenn Cordial";
             employeeNames[4] = "Mickey Abelidas";
         }
-        static void RecordTimeIn()
+        static void RecordAttendance()
         {
             Console.Write("Enter Employee Name: ");
             string name = Console.ReadLine();
@@ -56,7 +56,53 @@ namespace EmployeeManagementSystem
                 return;
             }
 
-            attendanceLogs.Add(name + " | Time In Recorded");
+            Console.WriteLine("\nSelect Shift:");
+            Console.WriteLine("1 - Morning (8AM - 5PM)");
+            Console.WriteLine("2 - Afternoon (1PM - 10PM)");
+            string shift = Console.ReadLine();
+
+            Console.Write("Enter Time In: ");
+            string timeIn = Console.ReadLine();
+
+            Console.Write("Enter Time Out: ");
+            string timeOut = Console.ReadLine();
+
+            string status = "On Time";
+            string overtime = "No";
+            string undertime = "No";
+
+            if (shift == "1")
+            {
+                if (timeIn != "8AM")
+                    status = "Late";
+
+
+                if (timeOut == "6PM")
+                    overtime = "Yes";
+
+                if (timeOut == "4PM")
+                    undertime = "Yes";
+            }
+
+            else if (shift == "2")
+            {
+                if (timeIn != "1PM")
+                    status = "Late";
+
+                if (timeOut == "11PM")
+                    overtime = "Yes";
+
+                if (timeOut == "9PM")
+                    undertime = "Yes";
+            }
+
+            attendanceLogs.Add(
+                            name +
+                            " | Shift: " + shift +
+                            " | Status: " + status +
+                            " | Overtime: " + overtime +
+                            " | Undertime: " + undertime
+                        );
 
             Console.WriteLine("Time In Successfully Recorded.");
         }
