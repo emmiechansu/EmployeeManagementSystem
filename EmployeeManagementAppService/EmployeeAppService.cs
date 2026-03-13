@@ -1,10 +1,16 @@
-﻿using EmployeeManagementModels;
-using EmployeeManagementDataService;
+﻿using EmployeeManagementDataService;
+using EmployeeManagementModels;
 
 namespace EmployeeManagementAppService
 {
-    public class AttendanceBL
+    public class EmployeeAppService
     {
+        public static void AddEmployee(string name)
+        {
+            Employee emp = new Employee { Name = name };
+            EmployeeDL.AddEmployee(emp);
+        }
+
         public static void RecordAttendance(string name, string shift, string timeIn, string timeOut)
         {
             string status = "On Time";

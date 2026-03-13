@@ -1,5 +1,14 @@
-﻿namespace EmployeeManagementModels
+﻿using System;
+using System.Collections.Generic;
+using System.Text;
+
+namespace EmployeeManagementModels
 {
+    public class Employee
+    {
+        public string Name { get; set; }
+    }
+
     public class Attendance
     {
         public string Name { get; set; }

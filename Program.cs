@@ -1,6 +1,7 @@
-﻿using System;
-using EmployeeManagementAppService;
+﻿using EmployeeManagementAppService;
 using EmployeeManagementDataService;
+using EmployeeManagementModels;
+using System;
 
 namespace EmployeeManagementSystem
 {
@@ -25,7 +26,8 @@ namespace EmployeeManagementSystem
                 {
                     case "1":
                         Console.Write("Employee Name: ");
-                        EmployeeBL.AddEmployee(Console.ReadLine());
+                        string empName = Console.ReadLine();
+                        EmployeeAppService.AddEmployee(empName);
                         Console.WriteLine("Employee added!");
                         break;
 
@@ -42,12 +44,12 @@ namespace EmployeeManagementSystem
                         Console.Write("Time Out (e.g., 4PM, 6PM, 9PM, 11PM): ");
                         string timeOut = Console.ReadLine();
 
-                        AttendanceBL.RecordAttendance(name, shift, timeIn, timeOut);
+                        EmployeeAppService.RecordAttendance(name, shift, timeIn, timeOut);
                         Console.WriteLine("Attendance recorded!");
                         break;
 
                     case "3":
-                        var logs = AttendanceDL.GetLogs();
+                        var logs = AttendanceDL.GetAllLogs();
                         if (logs.Count == 0)
                             Console.WriteLine("No records found.");
                         else
