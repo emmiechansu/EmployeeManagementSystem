@@ -6,7 +6,7 @@ namespace EmployeeManagementAppService
 {
     public class EmployeeAppService
     {
-        EmployeeDataService employeeDataService = new EmployeeDataService(new EmployeeJsonData());
+        EmployeeDataService employeeDataService = new EmployeeDataService(new EmployeeDBData());
 
         public void AddEmployee(string name)
         {
@@ -57,7 +57,7 @@ namespace EmployeeManagementAppService
                 Undertime = undertime
             };
 
-            var attendanceData = new AttendanceJsonData();
+            var attendanceData = new AttendanceDBData();
             attendanceData.AddLog(att);
         }
 
@@ -73,7 +73,7 @@ namespace EmployeeManagementAppService
 
         public List<Attendance> GetAttendanceLogs()
         {
-            var attendanceData = new AttendanceJsonData();
+            var attendanceData = new AttendanceDBData();
             return attendanceData.GetAllLogs();
         }
     }

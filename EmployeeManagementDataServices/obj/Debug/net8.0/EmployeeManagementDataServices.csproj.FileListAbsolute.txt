@@ -8,9 +8,9 @@ C:\Users\MJ Pepito\source\repos\EmployeeManagementSystem\EmployeeManagementDataS
 C:\Users\MJ Pepito\source\repos\EmployeeManagementSystem\EmployeeManagementDataServices\obj\Debug\net8.0\EmployeeManagementDataServices.AssemblyInfoInputs.cache
 C:\Users\MJ Pepito\source\repos\EmployeeManagementSystem\EmployeeManagementDataServices\obj\Debug\net8.0\EmployeeManagementDataServices.AssemblyInfo.cs
 C:\Users\MJ Pepito\source\repos\EmployeeManagementSystem\EmployeeManagementDataServices\obj\Debug\net8.0\EmployeeManagementDataServices.csproj.CoreCompileInputs.cache
+C:\Users\MJ Pepito\source\repos\EmployeeManagementSystem\EmployeeManagementDataServices\obj\Debug\net8.0\EmployeeManagementDataServices.sourcelink.json
 C:\Users\MJ Pepito\source\repos\EmployeeManagementSystem\EmployeeManagementDataServices\obj\Debug\net8.0\Employee.848F4E4A.Up2Date
 C:\Users\MJ Pepito\source\repos\EmployeeManagementSystem\EmployeeManagementDataServices\obj\Debug\net8.0\EmployeeManagementDataServices.dll
 C:\Users\MJ Pepito\source\repos\EmployeeManagementSystem\EmployeeManagementDataServices\obj\Debug\net8.0\refint\EmployeeManagementDataServices.dll
 C:\Users\MJ Pepito\source\repos\EmployeeManagementSystem\EmployeeManagementDataServices\obj\Debug\net8.0\EmployeeManagementDataServices.pdb
 C:\Users\MJ Pepito\source\repos\EmployeeManagementSystem\EmployeeManagementDataServices\obj\Debug\net8.0\ref\EmployeeManagementDataServices.dll
-C:\Users\MJ Pepito\source\repos\EmployeeManagementSystem\EmployeeManagementDataServices\obj\Debug\net8.0\EmployeeManagementDataServices.sourcelink.json

@@ -5,9 +5,9 @@ namespace EmployeeManagementDataServices
 {
     public class EmployeeDataService : IEmployeeDataService
     {
-        private EmployeeJsonData _employeeData;
+        private IEmployeeDataService _employeeData;
 
-        public EmployeeDataService(EmployeeJsonData employeeData)
+        public EmployeeDataService(IEmployeeDataService employeeData)
         {
             _employeeData = employeeData;
         }
@@ -24,7 +24,7 @@ namespace EmployeeManagementDataServices
 
         public Employee? GetByName(string name)
         {
-            return _employeeData.GetAllEmployees().FirstOrDefault(e => e.Name == name);
+            return _employeeData.GetByName(name);
         }
     }
 }

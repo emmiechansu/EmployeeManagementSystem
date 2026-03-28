@@ -10,9 +10,9 @@ C:\Users\MJ Pepito\source\repos\EmployeeManagementSystem\EmployeeManagementAppSe
 C:\Users\MJ Pepito\source\repos\EmployeeManagementSystem\EmployeeManagementAppServices\obj\Debug\net8.0\EmployeeManagementAppServices.AssemblyInfoInputs.cache
 C:\Users\MJ Pepito\source\repos\EmployeeManagementSystem\EmployeeManagementAppServices\obj\Debug\net8.0\EmployeeManagementAppServices.AssemblyInfo.cs
 C:\Users\MJ Pepito\source\repos\EmployeeManagementSystem\EmployeeManagementAppServices\obj\Debug\net8.0\EmployeeManagementAppServices.csproj.CoreCompileInputs.cache
+C:\Users\MJ Pepito\source\repos\EmployeeManagementSystem\EmployeeManagementAppServices\obj\Debug\net8.0\EmployeeManagementAppServices.sourcelink.json
 C:\Users\MJ Pepito\source\repos\EmployeeManagementSystem\EmployeeManagementAppServices\obj\Debug\net8.0\Employee.DCC4754E.Up2Date
 C:\Users\MJ Pepito\source\repos\EmployeeManagementSystem\EmployeeManagementAppServices\obj\Debug\net8.0\EmployeeManagementAppServices.dll
 C:\Users\MJ Pepito\source\repos\EmployeeManagementSystem\EmployeeManagementAppServices\obj\Debug\net8.0\refint\EmployeeManagementAppServices.dll
 C:\Users\MJ Pepito\source\repos\EmployeeManagementSystem\EmployeeManagementAppServices\obj\Debug\net8.0\EmployeeManagementAppServices.pdb
 C:\Users\MJ Pepito\source\repos\EmployeeManagementSystem\EmployeeManagementAppServices\obj\Debug\net8.0\ref\EmployeeManagementAppServices.dll
-C:\Users\MJ Pepito\source\repos\EmployeeManagementSystem\EmployeeManagementAppServices\obj\Debug\net8.0\EmployeeManagementAppServices.sourcelink.json
