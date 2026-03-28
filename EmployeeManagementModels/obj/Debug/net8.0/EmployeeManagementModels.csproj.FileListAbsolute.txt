@@ -1,0 +1,11 @@
+C:\Users\MJ Pepito\source\repos\EmployeeManagementSystem\EmployeeManagementModels\bin\Debug\net8.0\EmployeeManagementModels.deps.json
+C:\Users\MJ Pepito\source\repos\EmployeeManagementSystem\EmployeeManagementModels\bin\Debug\net8.0\EmployeeManagementModels.dll
+C:\Users\MJ Pepito\source\repos\EmployeeManagementSystem\EmployeeManagementModels\bin\Debug\net8.0\EmployeeManagementModels.pdb
+C:\Users\MJ Pepito\source\repos\EmployeeManagementSystem\EmployeeManagementModels\obj\Debug\net8.0\EmployeeManagementModels.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\MJ Pepito\source\repos\EmployeeManagementSystem\EmployeeManagementModels\obj\Debug\net8.0\EmployeeManagementModels.AssemblyInfoInputs.cache
+C:\Users\MJ Pepito\source\repos\EmployeeManagementSystem\EmployeeManagementModels\obj\Debug\net8.0\EmployeeManagementModels.AssemblyInfo.cs
+C:\Users\MJ Pepito\source\repos\EmployeeManagementSystem\EmployeeManagementModels\obj\Debug\net8.0\EmployeeManagementModels.csproj.CoreCompileInputs.cache
+C:\Users\MJ Pepito\source\repos\EmployeeManagementSystem\EmployeeManagementModels\obj\Debug\net8.0\EmployeeManagementModels.dll
+C:\Users\MJ Pepito\source\repos\EmployeeManagementSystem\EmployeeManagementModels\obj\Debug\net8.0\refint\EmployeeManagementModels.dll
+C:\Users\MJ Pepito\source\repos\EmployeeManagementSystem\EmployeeManagementModels\obj\Debug\net8.0\EmployeeManagementModels.pdb
+C:\Users\MJ Pepito\source\repos\EmployeeManagementSystem\EmployeeManagementModels\obj\Debug\net8.0\ref\EmployeeManagementModels.dll

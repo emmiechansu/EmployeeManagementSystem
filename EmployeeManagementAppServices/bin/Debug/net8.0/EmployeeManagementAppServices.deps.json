@@ -1,0 +1,56 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v8.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v8.0": {
+      "EmployeeManagementAppServices/1.0.0": {
+        "dependencies": {
+          "EmployeeManagementDataServices": "1.0.0",
+          "EmployeeManagementModels": "1.0.0"
+        },
+        "runtime": {
+          "EmployeeManagementAppServices.dll": {}
+        }
+      },
+      "EmployeeManagementDataServices/1.0.0": {
+        "dependencies": {
+          "EmployeeManagementModels": "1.0.0"
+        },
+        "runtime": {
+          "EmployeeManagementDataServices.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
+      "EmployeeManagementModels/1.0.0": {
+        "runtime": {
+          "EmployeeManagementModels.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      }
+    }
+  },
+  "libraries": {
+    "EmployeeManagementAppServices/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "EmployeeManagementDataServices/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "EmployeeManagementModels/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
