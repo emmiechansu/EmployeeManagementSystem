@@ -1,35 +1,30 @@
-﻿using System.Collections.Generic;
-using EmployeeManagementModels;
+﻿using EmployeeManagementModels;
+using System.Collections.Generic;
 
 namespace EmployeeManagementDataServices
 {
-    public static class EmployeeDL
+    public class EmployeeDataService : IEmployeeDataService
     {
-        public static List<Employee> Employees = new List<Employee>();
+        private EmployeeJsonData _employeeData;
 
-        public static void AddEmployee(Employee emp)
+        public EmployeeDataService(EmployeeJsonData employeeData)
         {
-            Employees.Add(emp);
+            _employeeData = employeeData;
         }
 
-        public static List<Employee> GetAllEmployees()
+        public void AddEmployee(Employee employee)
         {
-            return Employees;
-        }
-    }
-
-    public static class AttendanceDL
-    {
-        public static List<Attendance> Attendances = new List<Attendance>();
-
-        public static void AddLog(Attendance att)
-        {
-            Attendances.Add(att);
+            _employeeData.AddEmployee(employee);
         }
 
-        public static List<Attendance> GetAllLogs()
+        public List<Employee> GetAllEmployees()
         {
-            return Attendances;
+            return _employeeData.GetAllEmployees();
+        }
+
+        public Employee? GetByName(string name)
+        {
+            return _employeeData.GetAllEmployees().FirstOrDefault(e => e.Name == name);
         }
     }
 }

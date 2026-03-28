@@ -13,3 +13,4 @@ C:\Users\MJ Pepito\source\repos\EmployeeManagementSystem\EmployeeManagementDataS
 C:\Users\MJ Pepito\source\repos\EmployeeManagementSystem\EmployeeManagementDataServices\obj\Debug\net8.0\refint\EmployeeManagementDataServices.dll
 C:\Users\MJ Pepito\source\repos\EmployeeManagementSystem\EmployeeManagementDataServices\obj\Debug\net8.0\EmployeeManagementDataServices.pdb
 C:\Users\MJ Pepito\source\repos\EmployeeManagementSystem\EmployeeManagementDataServices\obj\Debug\net8.0\ref\EmployeeManagementDataServices.dll
+C:\Users\MJ Pepito\source\repos\EmployeeManagementSystem\EmployeeManagementDataServices\obj\Debug\net8.0\EmployeeManagementDataServices.sourcelink.json

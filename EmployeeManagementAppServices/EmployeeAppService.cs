@@ -1,17 +1,20 @@
 ﻿using EmployeeManagementDataServices;
 using EmployeeManagementModels;
+using System.Collections.Generic;
 
 namespace EmployeeManagementAppService
 {
     public class EmployeeAppService
     {
-        public static void AddEmployee(string name)
+        EmployeeDataService employeeDataService = new EmployeeDataService(new EmployeeJsonData());
+
+        public void AddEmployee(string name)
         {
-            Employee emp = new Employee { Name = name };
-            EmployeeDL.AddEmployee(emp);
+            var emp = new Employee { EmployeeID = Guid.NewGuid(), Name = name };
+            employeeDataService.AddEmployee(emp);
         }
 
-        public static void RecordAttendance(string name, string shift, string timeIn, string timeOut)
+        public void RecordAttendance(string name, string shift, string timeIn, string timeOut)
         {
             string status = "On Time";
             string overtime = "No";
@@ -45,16 +48,33 @@ namespace EmployeeManagementAppService
                     undertime = "Yes";
             }
 
-            Attendance att = new Attendance
+            var att = new Attendance
             {
-                Name = name,
+                EmployeeName = name,
                 Shift = shiftName,
                 Status = status,
                 Overtime = overtime,
                 Undertime = undertime
             };
 
-            AttendanceDL.AddLog(att);
+            var attendanceData = new AttendanceJsonData();
+            attendanceData.AddLog(att);
+        }
+
+        public List<Employee> GetEmployees()
+        {
+            return employeeDataService.GetAllEmployees();
+        }
+
+        public Employee? GetEmployeeByName(string name)
+        {
+            return employeeDataService.GetByName(name);
+        }
+
+        public List<Attendance> GetAttendanceLogs()
+        {
+            var attendanceData = new AttendanceJsonData();
+            return attendanceData.GetAllLogs();
         }
     }
 }

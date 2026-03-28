@@ -15,3 +15,4 @@ C:\Users\MJ Pepito\source\repos\EmployeeManagementSystem\EmployeeManagementAppSe
 C:\Users\MJ Pepito\source\repos\EmployeeManagementSystem\EmployeeManagementAppServices\obj\Debug\net8.0\refint\EmployeeManagementAppServices.dll
 C:\Users\MJ Pepito\source\repos\EmployeeManagementSystem\EmployeeManagementAppServices\obj\Debug\net8.0\EmployeeManagementAppServices.pdb
 C:\Users\MJ Pepito\source\repos\EmployeeManagementSystem\EmployeeManagementAppServices\obj\Debug\net8.0\ref\EmployeeManagementAppServices.dll
+C:\Users\MJ Pepito\source\repos\EmployeeManagementSystem\EmployeeManagementAppServices\obj\Debug\net8.0\EmployeeManagementAppServices.sourcelink.json

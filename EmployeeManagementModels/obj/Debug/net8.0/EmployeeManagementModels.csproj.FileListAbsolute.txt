@@ -9,3 +9,4 @@ C:\Users\MJ Pepito\source\repos\EmployeeManagementSystem\EmployeeManagementModel
 C:\Users\MJ Pepito\source\repos\EmployeeManagementSystem\EmployeeManagementModels\obj\Debug\net8.0\refint\EmployeeManagementModels.dll
 C:\Users\MJ Pepito\source\repos\EmployeeManagementSystem\EmployeeManagementModels\obj\Debug\net8.0\EmployeeManagementModels.pdb
 C:\Users\MJ Pepito\source\repos\EmployeeManagementSystem\EmployeeManagementModels\obj\Debug\net8.0\ref\EmployeeManagementModels.dll
+C:\Users\MJ Pepito\source\repos\EmployeeManagementSystem\EmployeeManagementModels\obj\Debug\net8.0\EmployeeManagementModels.sourcelink.json
