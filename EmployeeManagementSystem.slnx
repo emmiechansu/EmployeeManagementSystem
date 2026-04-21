@@ -1,0 +1,4 @@
+<Solution>
+  <Project Path="EmployeeManagementAppService/EmployeeManagementAppService.csproj" Id="f5c97175-d338-48d6-9120-9321882e1982" />
+  <Project Path="EmployeeManagementSystem/EmployeeManagementSystem.csproj" />
+</Solution>
