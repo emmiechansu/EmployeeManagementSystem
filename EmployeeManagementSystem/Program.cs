@@ -8,7 +8,7 @@ namespace EmployeeManagementSystem
         static List<string> employeeIds = new List<string>();
         static List<string> employeeNames = new List<string>();
         static List<string> attendanceRecords = new List<string>();
-        static int nextEmployeeId = 1; 
+        static int nextEmployeeId = 1;
 
         static void Main(string[] args)
         {
@@ -28,7 +28,6 @@ namespace EmployeeManagementSystem
                     "Add Employee",
                     "Time In",
                     "Time Out",
-                    "View My Records",
                     "View All Employees",
                     "Search Employee",
                     "Delete Employee",
@@ -50,18 +49,15 @@ namespace EmployeeManagementSystem
                         TimeOut();
                         break;
                     case "4":
-                        ViewMyRecords();
-                        break;
-                    case "5":
                         ViewEmployees();
                         break;
-                    case "6":
+                    case "5":
                         SearchEmployee();
                         break;
-                    case "7":
+                    case "6":
                         DeleteEmployee();
                         break;
-                    case "8":
+                    case "7":
                         DisplayLogs();
                         break;
                     default:
@@ -84,26 +80,26 @@ namespace EmployeeManagementSystem
         static void AddEmployee()
         {
             Console.WriteLine("ADDING EMPLOYEE:");
-            Console.WriteLine($"🆕 Auto-generated ID: EMP{nextEmployeeId:000}");
+            Console.WriteLine("ID: EMP" + nextEmployeeId.ToString("000"));
 
             Console.Write("Employee Name: ");
-            string name = Console.ReadLine()?.Trim() ?? "";
+            string name = Console.ReadLine();
 
-            if (string.IsNullOrEmpty(name))
+            if (name == null || name.Trim() == "")
             {
                 Console.WriteLine("Name is required!");
                 return;
             }
 
-            string empId = $"EMP{nextEmployeeId:000}";
+            string empId = "EMP" + nextEmployeeId.ToString("000");
             employeeIds.Add(empId);
-            employeeNames.Add(name);
+            employeeNames.Add(name.Trim());
 
-            Console.WriteLine($"Successfully added employee:");
-            Console.WriteLine($"   ID: {empId}");
-            Console.WriteLine($"   Name: {name}");
+            Console.WriteLine("Successfully added employee:");
+            Console.WriteLine("   ID: " + empId);
+            Console.WriteLine("   Name: " + name.Trim());
 
-            nextEmployeeId++; 
+            nextEmployeeId++;
         }
 
         static void ViewEmployees()
@@ -119,23 +115,23 @@ namespace EmployeeManagementSystem
 
             for (int i = 0; i < employeeIds.Count; i++)
             {
-                Console.WriteLine($"ID: {employeeIds[i]} | Name: {employeeNames[i]}");
+                Console.WriteLine("ID: " + employeeIds[i] + " | Name: " + employeeNames[i]);
             }
         }
 
         static void UpdateEmployee()
         {
             Console.Write("Enter Employee ID to update: ");
-            string findEmp = Console.ReadLine()?.Trim() ?? "";
+            string findEmp = Console.ReadLine();
 
             for (int i = 0; i < employeeIds.Count; i++)
             {
                 if (employeeIds[i] == findEmp)
                 {
-                    Console.Write($"New name [{employeeNames[i]}]: ");
-                    string newName = Console.ReadLine()?.Trim();
-                    if (!string.IsNullOrEmpty(newName))
-                        employeeNames[i] = newName;
+                    Console.Write("New name [" + employeeNames[i] + "]: ");
+                    string newName = Console.ReadLine();
+                    if (newName != null && newName.Trim() != "")
+                        employeeNames[i] = newName.Trim();
 
                     Console.WriteLine("Employee updated!");
                     return;
@@ -147,13 +143,13 @@ namespace EmployeeManagementSystem
         static void DeleteEmployee()
         {
             Console.Write("Enter Employee ID to delete: ");
-            string empId = Console.ReadLine()?.Trim() ?? "";
+            string empId = Console.ReadLine();
 
             for (int i = 0; i < employeeIds.Count; i++)
             {
                 if (employeeIds[i] == empId)
                 {
-                    Console.WriteLine($"Deleting: {employeeNames[i]}");
+                    Console.WriteLine("Deleting: " + employeeNames[i]);
                     employeeIds.RemoveAt(i);
                     employeeNames.RemoveAt(i);
                     Console.WriteLine("Employee deleted!");
@@ -166,45 +162,25 @@ namespace EmployeeManagementSystem
         static void TimeIn()
         {
             Console.Write("Employee ID: ");
-            string empId = Console.ReadLine()?.Trim() ?? "";
+            string empId = Console.ReadLine();
             string time = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss");
-            attendanceRecords.Add($"{empId} TIME IN {time}");
-            Console.WriteLine("✅ Time IN recorded!");
+            attendanceRecords.Add(empId + " TIME IN " + time);
+            Console.WriteLine("Time IN recorded!");
         }
 
         static void TimeOut()
         {
             Console.Write("Employee ID: ");
-            string empId = Console.ReadLine()?.Trim() ?? "";
+            string empId = Console.ReadLine();
             string time = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss");
-            attendanceRecords.Add($"{empId} TIME OUT {time}");
+            attendanceRecords.Add(empId + " TIME OUT " + time);
             Console.WriteLine("Time OUT recorded!");
-        }
-
-        static void ViewMyRecords()
-        {
-            Console.Write("Employee ID: ");
-            string empId = Console.ReadLine()?.Trim() ?? "";
-
-            Console.WriteLine($"\nRECORDS FOR {empId}:");
-            Console.WriteLine(new string('-', 40));
-            bool found = false;
-            foreach (string record in attendanceRecords)
-            {
-                if (record.Contains(empId))
-                {
-                    Console.WriteLine(record);
-                    found = true;
-                }
-            }
-            if (!found)
-                Console.WriteLine("No records found.");
         }
 
         static void SearchEmployee()
         {
             Console.Write("Search (ID/Name): ");
-            string search = Console.ReadLine()?.Trim().ToLower() ?? "";
+            string search = Console.ReadLine();
 
             Console.WriteLine("\nFOUND:");
             Console.WriteLine(new string('-', 30));
@@ -212,10 +188,10 @@ namespace EmployeeManagementSystem
 
             for (int i = 0; i < employeeIds.Count; i++)
             {
-                if (employeeIds[i].ToLower().Contains(search) ||
-                    employeeNames[i].ToLower().Contains(search))
+                if (employeeIds[i].ToLower().Contains(search.ToLower()) ||
+                    employeeNames[i].ToLower().Contains(search.ToLower()))
                 {
-                    Console.WriteLine($"{employeeIds[i]} - {employeeNames[i]}");
+                    Console.WriteLine(employeeIds[i] + " - " + employeeNames[i]);
                     foundAny = true;
                 }
             }
@@ -243,7 +219,7 @@ namespace EmployeeManagementSystem
         {
             for (int x = 0; x < options.Length; x++)
             {
-                Console.WriteLine($"[{x + 1}] {options[x]}");
+                Console.WriteLine("[" + (x + 1) + "] " + options[x]);
             }
             Console.Write("Enter the number of your option: ");
         }

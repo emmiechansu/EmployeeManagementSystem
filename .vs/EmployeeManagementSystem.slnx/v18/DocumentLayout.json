@@ -3,8 +3,16 @@
   "WorkspaceRootPath": "C:\\Users\\MJ Pepito\\source\\repos\\EmployeeManagementSystem\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{72216EF6-DBB1-CBEA-C489-EEE33E8BACCF}|EmployeeManagementSystem\\EmployeeManagementSystem.csproj|c:\\users\\mj pepito\\source\\repos\\employeemanagementsystem\\employeemanagementsystem\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{72216EF6-DBB1-CBEA-C489-EEE33E8BACCF}|EmployeeManagementSystem\\EmployeeManagementSystem.csproj|solutionrelative:employeemanagementsystem\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{F5C97175-D338-48D6-9120-9321882E1982}|EmployeeManagementAppService\\EmployeeManagementAppService.csproj|c:\\users\\mj pepito\\source\\repos\\employeemanagementsystem\\employeemanagementappservice\\employeeappservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{F5C97175-D338-48D6-9120-9321882E1982}|EmployeeManagementAppService\\EmployeeManagementAppService.csproj|solutionrelative:employeemanagementappservice\\employeeappservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3E4DAE71-DBCB-4771-8F23-91D9E8CFB93C}|EmployeeManagementDataService\\EmployeeManagementDataService.csproj|c:\\users\\mj pepito\\source\\repos\\employeemanagementsystem\\employeemanagementdataservice\\employeedataservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3E4DAE71-DBCB-4771-8F23-91D9E8CFB93C}|EmployeeManagementDataService\\EmployeeManagementDataService.csproj|solutionrelative:employeemanagementdataservice\\employeedataservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{3E4DAE71-DBCB-4771-8F23-91D9E8CFB93C}|EmployeeManagementDataService\\EmployeeManagementDataService.csproj|c:\\users\\mj pepito\\source\\repos\\employeemanagementsystem\\employeemanagementdataservice\\employeeinmemorydata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -15,16 +23,8 @@
       "RelativeMoniker": "D:0:0:{3E4DAE71-DBCB-4771-8F23-91D9E8CFB93C}|EmployeeManagementDataService\\EmployeeManagementDataService.csproj|solutionrelative:employeemanagementdataservice\\employeedbdata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3E4DAE71-DBCB-4771-8F23-91D9E8CFB93C}|EmployeeManagementDataService\\EmployeeManagementDataService.csproj|c:\\users\\mj pepito\\source\\repos\\employeemanagementsystem\\employeemanagementdataservice\\employeedataservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3E4DAE71-DBCB-4771-8F23-91D9E8CFB93C}|EmployeeManagementDataService\\EmployeeManagementDataService.csproj|solutionrelative:employeemanagementdataservice\\employeedataservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{D135B1E8-D225-4A2F-ADBC-AF19F4A9DD4F}|EmployeeManagementModels\\EmployeeManagementModels.csproj|c:\\users\\mj pepito\\source\\repos\\employeemanagementsystem\\employeemanagementmodels\\employee.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{D135B1E8-D225-4A2F-ADBC-AF19F4A9DD4F}|EmployeeManagementModels\\EmployeeManagementModels.csproj|solutionrelative:employeemanagementmodels\\employee.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{72216EF6-DBB1-CBEA-C489-EEE33E8BACCF}|EmployeeManagementSystem\\EmployeeManagementSystem.csproj|c:\\users\\mj pepito\\source\\repos\\employeemanagementsystem\\employeemanagementsystem\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{72216EF6-DBB1-CBEA-C489-EEE33E8BACCF}|EmployeeManagementSystem\\EmployeeManagementSystem.csproj|solutionrelative:employeemanagementsystem\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -34,11 +34,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 5,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
               "Title": "EmployeeInMemoryData.cs",
               "DocumentMoniker": "C:\\Users\\MJ Pepito\\source\\repos\\EmployeeManagementSystem\\EmployeeManagementDataService\\EmployeeInMemoryData.cs",
               "RelativeDocumentMoniker": "EmployeeManagementDataService\\EmployeeInMemoryData.cs",
@@ -51,33 +51,33 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "EmployeeAppService.cs",
               "DocumentMoniker": "C:\\Users\\MJ Pepito\\source\\repos\\EmployeeManagementSystem\\EmployeeManagementAppService\\EmployeeAppService.cs",
               "RelativeDocumentMoniker": "EmployeeManagementAppService\\EmployeeAppService.cs",
               "ToolTip": "C:\\Users\\MJ Pepito\\source\\repos\\EmployeeManagementSystem\\EmployeeManagementAppService\\EmployeeAppService.cs",
               "RelativeToolTip": "EmployeeManagementAppService\\EmployeeAppService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAAwEAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-04-22T03:36:34.847Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 2,
               "Title": "EmployeeDataService.cs",
               "DocumentMoniker": "C:\\Users\\MJ Pepito\\source\\repos\\EmployeeManagementSystem\\EmployeeManagementDataService\\EmployeeDataService.cs",
               "RelativeDocumentMoniker": "EmployeeManagementDataService\\EmployeeDataService.cs",
               "ToolTip": "C:\\Users\\MJ Pepito\\source\\repos\\EmployeeManagementSystem\\EmployeeManagementDataService\\EmployeeDataService.cs",
               "RelativeToolTip": "EmployeeManagementDataService\\EmployeeDataService.cs",
-              "ViewState": "AgIAACUAAAAAAAAAAAAAwDoAAAAyAAAAAAAAAA==",
+              "ViewState": "AgIAABIAAAAAAAAAAAAYwDoAAAAyAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-04-22T03:35:30.764Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 4,
               "Title": "EmployeeDBData.cs",
               "DocumentMoniker": "C:\\Users\\MJ Pepito\\source\\repos\\EmployeeManagementSystem\\EmployeeManagementDataService\\EmployeeDBData.cs",
               "RelativeDocumentMoniker": "EmployeeManagementDataService\\EmployeeDBData.cs",
@@ -90,7 +90,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "Employee.cs",
               "DocumentMoniker": "C:\\Users\\MJ Pepito\\source\\repos\\EmployeeManagementSystem\\EmployeeManagementModels\\Employee.cs",
               "RelativeDocumentMoniker": "EmployeeManagementModels\\Employee.cs",
@@ -103,13 +103,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 0,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\MJ Pepito\\source\\repos\\EmployeeManagementSystem\\EmployeeManagementSystem\\Program.cs",
               "RelativeDocumentMoniker": "EmployeeManagementSystem\\Program.cs",
               "ToolTip": "C:\\Users\\MJ Pepito\\source\\repos\\EmployeeManagementSystem\\EmployeeManagementSystem\\Program.cs",
               "RelativeToolTip": "EmployeeManagementSystem\\Program.cs",
-              "ViewState": "AgIAANIAAAAAAAAAAAAkwOIAAAAhAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAOIAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-04-20T16:14:39.867Z",
               "EditorCaption": ""
