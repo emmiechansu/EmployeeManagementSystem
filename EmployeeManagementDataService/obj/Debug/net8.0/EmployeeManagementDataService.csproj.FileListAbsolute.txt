@@ -1,0 +1,6 @@
+C:\Users\MJ Pepito\source\repos\EmployeeManagementSystem\EmployeeManagementDataService\obj\Debug\net8.0\EmployeeManagementDataService.csproj.AssemblyReference.cache
+C:\Users\MJ Pepito\source\repos\EmployeeManagementSystem\EmployeeManagementDataService\obj\Debug\net8.0\EmployeeManagementDataService.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\MJ Pepito\source\repos\EmployeeManagementSystem\EmployeeManagementDataService\obj\Debug\net8.0\EmployeeManagementDataService.AssemblyInfoInputs.cache
+C:\Users\MJ Pepito\source\repos\EmployeeManagementSystem\EmployeeManagementDataService\obj\Debug\net8.0\EmployeeManagementDataService.AssemblyInfo.cs
+C:\Users\MJ Pepito\source\repos\EmployeeManagementSystem\EmployeeManagementDataService\obj\Debug\net8.0\EmployeeManagementDataService.csproj.CoreCompileInputs.cache
+C:\Users\MJ Pepito\source\repos\EmployeeManagementSystem\EmployeeManagementDataService\obj\Debug\net8.0\EmployeeManagementDataService.sourcelink.json

@@ -1,6 +1,6 @@
 <Solution>
   <Project Path="EmployeeManagementAppService/EmployeeManagementAppService.csproj" Id="f5c97175-d338-48d6-9120-9321882e1982" />
   <Project Path="EmployeeManagementDataService/EmployeeManagementDataService.csproj" Id="3e4dae71-dbcb-4771-8f23-91d9e8cfb93c" />
-  <Project Path="EmployeeManagementModels/EmployeeManagementModels.csproj" Id="d135b1e8-d225-4a2f-adbc-af19f4a9dd4f" />
+  <Project Path="EmployeeManagementModels/EmployeeManagementModels.csproj" Id="ef697cc1-73eb-4099-8577-f9332fea5879" />
   <Project Path="EmployeeManagementSystem/EmployeeManagementSystem.csproj" />
 </Solution>

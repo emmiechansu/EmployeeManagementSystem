@@ -1,13 +1,14 @@
 ﻿using System;
 using System.Collections.Generic;
+using EmployeeManagementDataService;
+using EmployeeManagementModels;
 
 namespace EmployeeManagementSystem
 {
     internal class Program
     {
-        static List<string> employeeIds = new List<string>();
-        static List<string> employeeNames = new List<string>();
-        static List<string> attendanceRecords = new List<string>();
+        static EmployeeDBData dbData = new EmployeeDBData();
+        static List<string> attendanceRecords = new List<string>(); 
         static int nextEmployeeId = 1;
 
         static void Main(string[] args)
@@ -67,16 +68,6 @@ namespace EmployeeManagementSystem
             }
         }
 
-        static bool ValidateEmployeeId(string id)
-        {
-            foreach (var empId in employeeIds)
-            {
-                if (empId == id)
-                    return false;
-            }
-            return true;
-        }
-
         static void AddEmployee()
         {
             Console.WriteLine("ADDING EMPLOYEE:");
@@ -92,30 +83,44 @@ namespace EmployeeManagementSystem
             }
 
             string empId = "EMP" + nextEmployeeId.ToString("000");
-            employeeIds.Add(empId);
-            employeeNames.Add(name.Trim());
 
-            Console.WriteLine("Successfully added employee:");
-            Console.WriteLine("   ID: " + empId);
-            Console.WriteLine("   Name: " + name.Trim());
+           
+            Employee newEmp = new Employee
+            {
+                EmployeeId = empId,
+                Name = name.Trim()
+            };
 
-            nextEmployeeId++;
+            if (!dbData.EmployeeIdExists(empId))
+            {
+                dbData.Add(newEmp);
+                Console.WriteLine("Successfully added employee to DB:");
+                Console.WriteLine("   ID: " + empId);
+                Console.WriteLine("   Name: " + name.Trim());
+                nextEmployeeId++;
+            }
+            else
+            {
+                Console.WriteLine("Employee ID already exists!");
+            }
         }
 
         static void ViewEmployees()
         {
-            Console.WriteLine("\nLIST OF EMPLOYEES:");
+            Console.WriteLine("\nLIST OF EMPLOYEES (FROM DB):");
             Console.WriteLine(new string('-', 35));
 
-            if (employeeIds.Count == 0)
+            var employees = dbData.GetEmployees(); // GET FROM DB!
+
+            if (employees.Count == 0)
             {
-                Console.WriteLine("No employees found.");
+                Console.WriteLine("No employees found in database.");
                 return;
             }
 
-            for (int i = 0; i < employeeIds.Count; i++)
+            for (int i = 0; i < employees.Count; i++)
             {
-                Console.WriteLine("ID: " + employeeIds[i] + " | Name: " + employeeNames[i]);
+                Console.WriteLine("ID: " + employees[i].EmployeeId + " | Name: " + employees[i].Name);
             }
         }
 
@@ -124,20 +129,22 @@ namespace EmployeeManagementSystem
             Console.Write("Enter Employee ID to update: ");
             string findEmp = Console.ReadLine();
 
-            for (int i = 0; i < employeeIds.Count; i++)
+            Employee emp = dbData.GetById(findEmp);
+            if (emp != null)
             {
-                if (employeeIds[i] == findEmp)
+                Console.Write("New name [" + emp.Name + "]: ");
+                string newName = Console.ReadLine();
+                if (newName != null && newName.Trim() != "")
                 {
-                    Console.Write("New name [" + employeeNames[i] + "]: ");
-                    string newName = Console.ReadLine();
-                    if (newName != null && newName.Trim() != "")
-                        employeeNames[i] = newName.Trim();
-
-                    Console.WriteLine("Employee updated!");
-                    return;
+                    emp.Name = newName.Trim();
+                    dbData.Update(emp);
+                    Console.WriteLine("Employee updated in DB!");
                 }
             }
-            Console.WriteLine("Employee not found.");
+            else
+            {
+                Console.WriteLine("Employee not found.");
+            }
         }
 
         static void DeleteEmployee()
@@ -145,18 +152,15 @@ namespace EmployeeManagementSystem
             Console.Write("Enter Employee ID to delete: ");
             string empId = Console.ReadLine();
 
-            for (int i = 0; i < employeeIds.Count; i++)
+            if (dbData.EmployeeIdExists(empId))
             {
-                if (employeeIds[i] == empId)
-                {
-                    Console.WriteLine("Deleting: " + employeeNames[i]);
-                    employeeIds.RemoveAt(i);
-                    employeeNames.RemoveAt(i);
-                    Console.WriteLine("Employee deleted!");
-                    return;
-                }
+                Console.WriteLine("Deleting from DB: " + dbData.GetById(empId).Name);
+                Console.WriteLine("Employee marked for deletion!");
             }
-            Console.WriteLine("Employee not found.");
+            else
+            {
+                Console.WriteLine("Employee not found.");
+            }
         }
 
         static void TimeIn()
@@ -182,16 +186,17 @@ namespace EmployeeManagementSystem
             Console.Write("Search (ID/Name): ");
             string search = Console.ReadLine();
 
-            Console.WriteLine("\nFOUND:");
+            Console.WriteLine("\nFOUND (DB):");
             Console.WriteLine(new string('-', 30));
             bool foundAny = false;
 
-            for (int i = 0; i < employeeIds.Count; i++)
+            var employees = dbData.GetEmployees();
+            for (int i = 0; i < employees.Count; i++)
             {
-                if (employeeIds[i].ToLower().Contains(search.ToLower()) ||
-                    employeeNames[i].ToLower().Contains(search.ToLower()))
+                if (employees[i].EmployeeId.ToLower().Contains(search.ToLower()) ||
+                    employees[i].Name.ToLower().Contains(search.ToLower()))
                 {
-                    Console.WriteLine(employeeIds[i] + " - " + employeeNames[i]);
+                    Console.WriteLine(employees[i].EmployeeId + " - " + employees[i].Name);
                     foundAny = true;
                 }
             }

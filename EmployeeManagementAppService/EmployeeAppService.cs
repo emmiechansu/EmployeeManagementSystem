@@ -1,4 +1,6 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
 using EmployeeManagementModels;
 using EmployeeManagementDataService;
 
@@ -6,9 +8,13 @@ namespace EmployeeManagementAppService
 {
     public class EmployeeAppService
     {
-        EmployeeDataService employeeDataService = new EmployeeDataService(new EmployeeDBData());
+        private EmployeeDataService employeeDataService;
 
-       
+        public EmployeeAppService()
+        {
+            employeeDataService = new EmployeeDataService();
+        }
+
         public bool Register(Employee newEmployee)
         {
             if (employeeDataService.EmployeeIdExists(newEmployee.EmployeeId))
@@ -36,6 +42,7 @@ namespace EmployeeManagementAppService
             employeeDataService.Delete(employeeId);
             return true;
         }
+
         public bool TimeIn(string employeeId, string shift)
         {
             var employee = employeeDataService.GetById(employeeId);
@@ -59,30 +66,29 @@ namespace EmployeeManagementAppService
 
         public bool TimeOut(string employeeId)
         {
-            var todayRecords = employeeDataService.GetAttendanceByEmployee(employeeId)
+            var todayRecord = employeeDataService.GetAttendanceByEmployee(employeeId)
                 .Where(r => r.Date == DateTime.Now.ToString("yyyy-MM-dd") && string.IsNullOrEmpty(r.TimeOut))
                 .FirstOrDefault();
 
-            if (todayRecords == null)
+            if (todayRecord == null)
                 return false;
 
-            todayRecords.TimeOut = DateTime.Now.ToString("HH:mm:ss");
-          
-            todayRecords.HoursWorked = 8.0; 
+            todayRecord.TimeOut = DateTime.Now.ToString("HH:mm:ss");
+            todayRecord.HoursWorked = 8.0;
 
             return true;
         }
 
-    
         public List<Employee> GetEmployees()
         {
             return employeeDataService.GetEmployees();
-        }    
+        }
+
         public Employee GetEmployee(string employeeId)
         {
             return employeeDataService.GetById(employeeId);
         }
-        
+
         public List<AttendanceRecord> GetAttendanceRecords()
         {
             return employeeDataService.GetAllAttendance();
