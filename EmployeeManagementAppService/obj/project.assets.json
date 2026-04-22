@@ -8,6 +8,33 @@
           "build/Microsoft.VisualStudio.Azure.Containers.Tools.Targets.props": {},
           "build/Microsoft.VisualStudio.Azure.Containers.Tools.Targets.targets": {}
         }
+      },
+      "EmployeeManagementDataService/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v10.0",
+        "dependencies": {
+          "EmployeeManagementModels": "1.0.0",
+          "Microsoft.VisualStudio.Azure.Containers.Tools.Targets": "1.23.0"
+        },
+        "compile": {
+          "bin/placeholder/EmployeeManagementDataService.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/EmployeeManagementDataService.dll": {}
+        }
+      },
+      "EmployeeManagementModels/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v10.0",
+        "dependencies": {
+          "Microsoft.VisualStudio.Azure.Containers.Tools.Targets": "1.23.0"
+        },
+        "compile": {
+          "bin/placeholder/EmployeeManagementModels.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/EmployeeManagementModels.dll": {}
+        }
       }
     }
   },
@@ -91,10 +118,22 @@
         "tools/zh-Hant/Microsoft.VisualStudio.Containers.Tools.Shared.resources.dll",
         "tools/zh-Hant/Microsoft.VisualStudio.Containers.Tools.Tasks.resources.dll"
       ]
+    },
+    "EmployeeManagementDataService/1.0.0": {
+      "type": "project",
+      "path": "../EmployeeManagementDataService/EmployeeManagementDataService.csproj",
+      "msbuildProject": "../EmployeeManagementDataService/EmployeeManagementDataService.csproj"
+    },
+    "EmployeeManagementModels/1.0.0": {
+      "type": "project",
+      "path": "../EmployeeManagementModels/EmployeeManagementModels.csproj",
+      "msbuildProject": "../EmployeeManagementModels/EmployeeManagementModels.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net10.0": [
+      "EmployeeManagementDataService >= 1.0.0",
+      "EmployeeManagementModels >= 1.0.0",
       "Microsoft.VisualStudio.Azure.Containers.Tools.Targets >= 1.23.0"
     ]
   },
@@ -129,7 +168,14 @@
       "frameworks": {
         "net10.0": {
           "targetAlias": "net10.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\MJ Pepito\\source\\repos\\EmployeeManagementSystem\\EmployeeManagementDataService\\EmployeeManagementDataService.csproj": {
+              "projectPath": "C:\\Users\\MJ Pepito\\source\\repos\\EmployeeManagementSystem\\EmployeeManagementDataService\\EmployeeManagementDataService.csproj"
+            },
+            "C:\\Users\\MJ Pepito\\source\\repos\\EmployeeManagementSystem\\EmployeeManagementModels\\EmployeeManagementModels.csproj": {
+              "projectPath": "C:\\Users\\MJ Pepito\\source\\repos\\EmployeeManagementSystem\\EmployeeManagementModels\\EmployeeManagementModels.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

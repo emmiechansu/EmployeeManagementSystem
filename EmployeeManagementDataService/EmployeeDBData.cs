@@ -1,10 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using System.Collections.Generic;
+using EmployeeManagementModels;
 
 namespace EmployeeManagementDataService
 {
-    internal class EmployeeDBData
+    public class EmployeeDBData
     {
+        public List<Employee> Employees { get; set; } = new List<Employee>();
+        public List<AttendanceRecord> AttendanceRecords { get; set; } = new List<AttendanceRecord>();
     }
 }
