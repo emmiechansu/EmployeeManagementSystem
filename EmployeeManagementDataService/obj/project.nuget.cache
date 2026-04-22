@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "ODwA3xu3iQs=",
+  "success": true,
+  "projectFilePath": "C:\\Users\\MJ Pepito\\source\\repos\\EmployeeManagementSystem\\EmployeeManagementDataService\\EmployeeManagementDataService.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\MJ Pepito\\.nuget\\packages\\microsoft.visualstudio.azure.containers.tools.targets\\1.23.0\\microsoft.visualstudio.azure.containers.tools.targets.1.23.0.nupkg.sha512"
+  ],
+  "logs": []
+}

@@ -1,6 +1,6 @@
 ﻿namespace EmployeeManagementAppService
 {
-    internal class Program
+    internal class EmployeeAppService
     {
         static void Main(string[] args)
         {
