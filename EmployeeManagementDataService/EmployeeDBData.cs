@@ -2,6 +2,7 @@
 using EmployeeManagementModels;
 using Microsoft.Data.SqlClient;
 using System.Collections.Generic;
+using System.Linq; 
 
 namespace EmployeeManagementDataService
 {
@@ -26,6 +27,21 @@ namespace EmployeeManagementDataService
             }
         }
 
+  
+        public string GenerateNextEmployeeId()
+        {
+            var employees = GetEmployees();
+            if (employees.Count == 0)
+                return "EMP001";
+
+            var lastEmployee = employees.OrderByDescending(e => e.EmployeeId).First();
+
+            int lastNumber = int.Parse(lastEmployee.EmployeeId.Substring(3));
+            int nextNumber = lastNumber + 1;
+
+            return "EMP" + nextNumber.ToString("000");
+        }
+        
         public void Add(Employee employee)
         {
             var insertStatement = "INSERT INTO Employees VALUES (@EmployeeId, @Name)";

@@ -1,6 +1,16 @@
+C:\Users\MJ Pepito\source\repos\EmployeeManagementSystem\EmployeeManagementDataService\bin\Debug\net8.0\EmployeeManagementDataService.deps.json
+C:\Users\MJ Pepito\source\repos\EmployeeManagementSystem\EmployeeManagementDataService\bin\Debug\net8.0\EmployeeManagementDataService.dll
+C:\Users\MJ Pepito\source\repos\EmployeeManagementSystem\EmployeeManagementDataService\bin\Debug\net8.0\EmployeeManagementDataService.pdb
+C:\Users\MJ Pepito\source\repos\EmployeeManagementSystem\EmployeeManagementDataService\bin\Debug\net8.0\EmployeeManagementModels.dll
+C:\Users\MJ Pepito\source\repos\EmployeeManagementSystem\EmployeeManagementDataService\bin\Debug\net8.0\EmployeeManagementModels.pdb
 C:\Users\MJ Pepito\source\repos\EmployeeManagementSystem\EmployeeManagementDataService\obj\Debug\net8.0\EmployeeManagementDataService.csproj.AssemblyReference.cache
 C:\Users\MJ Pepito\source\repos\EmployeeManagementSystem\EmployeeManagementDataService\obj\Debug\net8.0\EmployeeManagementDataService.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\MJ Pepito\source\repos\EmployeeManagementSystem\EmployeeManagementDataService\obj\Debug\net8.0\EmployeeManagementDataService.AssemblyInfoInputs.cache
 C:\Users\MJ Pepito\source\repos\EmployeeManagementSystem\EmployeeManagementDataService\obj\Debug\net8.0\EmployeeManagementDataService.AssemblyInfo.cs
 C:\Users\MJ Pepito\source\repos\EmployeeManagementSystem\EmployeeManagementDataService\obj\Debug\net8.0\EmployeeManagementDataService.csproj.CoreCompileInputs.cache
 C:\Users\MJ Pepito\source\repos\EmployeeManagementSystem\EmployeeManagementDataService\obj\Debug\net8.0\EmployeeManagementDataService.sourcelink.json
+C:\Users\MJ Pepito\source\repos\EmployeeManagementSystem\EmployeeManagementDataService\obj\Debug\net8.0\Employee.70A797DB.Up2Date
+C:\Users\MJ Pepito\source\repos\EmployeeManagementSystem\EmployeeManagementDataService\obj\Debug\net8.0\EmployeeManagementDataService.dll
+C:\Users\MJ Pepito\source\repos\EmployeeManagementSystem\EmployeeManagementDataService\obj\Debug\net8.0\refint\EmployeeManagementDataService.dll
+C:\Users\MJ Pepito\source\repos\EmployeeManagementSystem\EmployeeManagementDataService\obj\Debug\net8.0\EmployeeManagementDataService.pdb
+C:\Users\MJ Pepito\source\repos\EmployeeManagementSystem\EmployeeManagementDataService\obj\Debug\net8.0\ref\EmployeeManagementDataService.dll

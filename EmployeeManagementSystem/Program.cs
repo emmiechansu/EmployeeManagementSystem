@@ -71,7 +71,9 @@ namespace EmployeeManagementSystem
         static void AddEmployee()
         {
             Console.WriteLine("ADDING EMPLOYEE:");
-            Console.WriteLine("ID: EMP" + nextEmployeeId.ToString("000"));
+
+            string empId = dbData.GenerateNextEmployeeId();
+            Console.WriteLine("ID: " + empId);
 
             Console.Write("Employee Name: ");
             string name = Console.ReadLine();
@@ -82,27 +84,16 @@ namespace EmployeeManagementSystem
                 return;
             }
 
-            string empId = "EMP" + nextEmployeeId.ToString("000");
-
-           
             Employee newEmp = new Employee
             {
                 EmployeeId = empId,
                 Name = name.Trim()
             };
 
-            if (!dbData.EmployeeIdExists(empId))
-            {
-                dbData.Add(newEmp);
-                Console.WriteLine("Successfully added employee to DB:");
-                Console.WriteLine("   ID: " + empId);
-                Console.WriteLine("   Name: " + name.Trim());
-                nextEmployeeId++;
-            }
-            else
-            {
-                Console.WriteLine("Employee ID already exists!");
-            }
+            dbData.Add(newEmp);
+            Console.WriteLine("Successfully added employee to DB:");
+            Console.WriteLine("   ID: " + empId);
+            Console.WriteLine("   Name: " + name.Trim());
         }
 
         static void ViewEmployees()
@@ -110,7 +101,7 @@ namespace EmployeeManagementSystem
             Console.WriteLine("\nLIST OF EMPLOYEES (FROM DB):");
             Console.WriteLine(new string('-', 35));
 
-            var employees = dbData.GetEmployees(); // GET FROM DB!
+            var employees = dbData.GetEmployees(); 
 
             if (employees.Count == 0)
             {
