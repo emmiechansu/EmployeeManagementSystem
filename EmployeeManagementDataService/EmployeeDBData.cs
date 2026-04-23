@@ -2,7 +2,7 @@
 using EmployeeManagementModels;
 using Microsoft.Data.SqlClient;
 using System.Collections.Generic;
-using System.Linq; 
+using System.Linq;
 
 namespace EmployeeManagementDataService
 {
@@ -27,7 +27,6 @@ namespace EmployeeManagementDataService
             }
         }
 
-  
         public string GenerateNextEmployeeId()
         {
             var employees = GetEmployees();
@@ -35,13 +34,11 @@ namespace EmployeeManagementDataService
                 return "EMP001";
 
             var lastEmployee = employees.OrderByDescending(e => e.EmployeeId).First();
-
             int lastNumber = int.Parse(lastEmployee.EmployeeId.Substring(3));
             int nextNumber = lastNumber + 1;
-
             return "EMP" + nextNumber.ToString("000");
         }
-        
+
         public void Add(Employee employee)
         {
             var insertStatement = "INSERT INTO Employees VALUES (@EmployeeId, @Name)";
@@ -122,14 +119,30 @@ namespace EmployeeManagementDataService
             sqlConnection.Close();
         }
 
+        public void Delete(string employeeId) 
+        {
+            var cmd = new SqlCommand("DELETE FROM Employees WHERE EmployeeId=@id", sqlConnection);
+            cmd.Parameters.AddWithValue("@id", employeeId);
+
+            sqlConnection.Open();
+            cmd.ExecuteNonQuery();
+            sqlConnection.Close();
+        }
+
         public void AddAttendance(AttendanceRecord record)
         {
             Console.WriteLine("Attendance added to DB: " + record.Date);
         }
 
-        public List<AttendanceRecord> GetAttendanceRecords()
+        public List<AttendanceRecord> GetAttendanceByEmployee(string employeeId) 
         {
             return new List<AttendanceRecord>();
         }
+
+        public List<AttendanceRecord> GetAllAttendance() 
+        {
+            return new List<AttendanceRecord>(); 
+        }
+        
     }
 }
