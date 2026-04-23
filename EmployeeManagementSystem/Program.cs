@@ -32,7 +32,8 @@ namespace EmployeeManagementSystem
                     "View All Employees",
                     "Search Employee",
                     "Delete Employee",
-                    "Display Logs"
+                    "Display Logs",
+                    "Exit"
                 };
                 ShowOptions(options);
 
@@ -60,6 +61,10 @@ namespace EmployeeManagementSystem
                         break;
                     case "7":
                         DisplayLogs();
+                        break;
+                    case "8":
+                        run = false;
+                        Console.WriteLine("Goodbye!");
                         break;
                     default:
                         Console.WriteLine("Invalid.");
@@ -145,8 +150,10 @@ namespace EmployeeManagementSystem
 
             if (dbData.EmployeeIdExists(empId))
             {
-                Console.WriteLine("Deleting from DB: " + dbData.GetById(empId).Name);
-                Console.WriteLine("Employee marked for deletion!");
+                Employee emp = dbData.GetById(empId);
+                Console.WriteLine("Deleting from DB: " + emp.Name);
+                dbData.Delete(empId);
+                Console.WriteLine("Employee deleted successfully from database!");
             }
             else
             {

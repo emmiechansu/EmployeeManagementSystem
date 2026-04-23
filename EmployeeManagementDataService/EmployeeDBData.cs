@@ -119,14 +119,16 @@ namespace EmployeeManagementDataService
             sqlConnection.Close();
         }
 
-        public void Delete(string employeeId) 
+        public void Delete(string employeeId)
         {
             var cmd = new SqlCommand("DELETE FROM Employees WHERE EmployeeId=@id", sqlConnection);
             cmd.Parameters.AddWithValue("@id", employeeId);
 
             sqlConnection.Open();
-            cmd.ExecuteNonQuery();
+            int rowsAffected = cmd.ExecuteNonQuery();
             sqlConnection.Close();
+
+            Console.WriteLine($"Deleted {rowsAffected} employee(s) from database.");
         }
 
         public void AddAttendance(AttendanceRecord record)
