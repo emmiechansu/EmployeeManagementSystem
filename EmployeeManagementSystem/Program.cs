@@ -8,7 +8,7 @@ namespace EmployeeManagementSystem
     internal class Program
     {
         static EmployeeDBData dbData = new EmployeeDBData();
-        static List<string> attendanceRecords = new List<string>(); 
+        static List<string> attendanceRecords = new List<string>();
         static int nextEmployeeId = 1;
 
         static void Main(string[] args)
@@ -101,7 +101,7 @@ namespace EmployeeManagementSystem
             Console.WriteLine("\nLIST OF EMPLOYEES (FROM DB):");
             Console.WriteLine(new string('-', 35));
 
-            var employees = dbData.GetEmployees(); 
+            var employees = dbData.GetEmployees();
 
             if (employees.Count == 0)
             {
@@ -154,22 +154,41 @@ namespace EmployeeManagementSystem
             }
         }
 
+        static bool EmployeeExists(string empId)
+        {
+            return dbData.EmployeeIdExists(empId);
+        }
+
         static void TimeIn()
         {
             Console.Write("Employee ID: ");
             string empId = Console.ReadLine();
+
+            if (!EmployeeExists(empId))
+            {
+                Console.WriteLine("Employee ID not found! Cannot record time in.");
+                return;
+            }
+
             string time = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss");
             attendanceRecords.Add(empId + " TIME IN " + time);
-            Console.WriteLine("Time IN recorded!");
+            Console.WriteLine("Time IN recorded for employee ID: " + empId);
         }
 
         static void TimeOut()
         {
             Console.Write("Employee ID: ");
             string empId = Console.ReadLine();
+
+            if (!EmployeeExists(empId))
+            {
+                Console.WriteLine("Employee ID not found! Cannot record time out.");
+                return;
+            }
+
             string time = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss");
             attendanceRecords.Add(empId + " TIME OUT " + time);
-            Console.WriteLine("Time OUT recorded!");
+            Console.WriteLine("Time OUT recorded for employee ID: " + empId);
         }
 
         static void SearchEmployee()
